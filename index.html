@@ -17,6 +17,24 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
+    .box__div {
+    animation: slide-in-top .7s ease-out;
+    transform-origin: top;
+    opacity: 100;
+    }
+
+    @keyframes slide-in-top {
+    0% {
+      transform: translateY(-100%);
+      opacity: .5;
+    }
+      100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    }
+    
+
     body {
       margin: 0;
       padding: 0;
