@@ -14,14 +14,7 @@
   <title>Frontend Mentor | Results summary component</title>
 
   <style>
-    /* .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    } */
     @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
     body {
@@ -31,7 +24,7 @@
     }
 
     .left__div {
-      background-color: hsl(228, 45%, 44%);
+      background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
       height: 330px;
       width: 100%;
       border-radius: 0 0 40px 40px;
@@ -39,55 +32,59 @@
     }
 
     .right__div {
-      /* background-color: red; */
       width: 100%;
       height: 250px
     }
 
     .Your__result {
       margin: 0;
-      color: hsl(221, 100%, 96%);
+      color: hsl(241, 100%, 89%);
       padding: 20px;
-      font-size: 15px;
+      font-size: 18px;
+      font-weight: 800;
     }
 
     .circle {
-      background-color: black;
-      width: 125px;
+      background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      width: 130px;
       margin-left: auto;
       margin-right: auto;
       border-radius: 50%;
-      height: 125px;
+      height: 130px;
       color: white;
     }
 
-    .circle__box {
-      /* background-color: red; */
-    }
 
     .seven__six {
       padding-top: 15px;
       font-size: 50px;
       margin: 0;
       font-weight: 800;
+  
     }
 
     .one__hundred {
       height: 9px;
       margin: 0px;
+      color: hsl(241, 100%, 89%);
+      font-weight: 800;
     }
 
     .Great {
       font-size: 23px;
-      margin-top: 15px;
+      margin-top: 10px;
       color: white;
+      font-weight: 600;
     }
 
     .Paragraph {
       width: 70%;
       margin-left: auto;
       margin-right: auto;
-      color: white;
+      color: hsl(241, 100%, 89%);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 0px;
     }
 
 
@@ -95,7 +92,8 @@
       width: 85%;
       background-color: white;
       margin: auto;
-    }
+      padding-bottom: 20px;   
+     }
 
     .Reaction,
     .Memory,
@@ -104,41 +102,161 @@
       display: flex;
       justify-content: space-between;
       border-radius: 10px;
-      padding: 2px;
+      padding-left: 30px;
+      padding-right: 30px;
       margin-top: 10px;
+      padding-top: 2px;
+      padding-bottom: 2px;
     }
 
     .Summary {
-      color: black;
+      color:hsl(224, 30%, 27%);
       background-color: white;
+      font-weight: 800;
     }
 
     .Reaction {
-      background-color: hsl(0, 100%, 67%);
-      padding-left: 10px;
-      padding-right: 10px;
-      opacity: 30%;
+      background-color: hsl(0, 100%, 93%);
+    }
+    
+
+    .Reaction__Word{
+      color: hsl(0, 100%, 67%);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
     }
 
-    /* .Reaction__Word {} */
+    .Reaction__SVG,.Memory__SVG,.Verbal__SVG,.Visual__SVG{
+      margin-right: 15px;
+    }
+
 
     .Memory {
-      background-color: hsl(39, 100%, 56%);
-      padding-left: 10px;
-      padding-right: 10px;
+      background-color: hsl(39, 100%, 93%);
+    }
+
+    .Memory__Word{
+      color:  hsl(39, 100%, 56%);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
     }
 
     .Verbal {
-      background-color: hsl(166, 100%, 37%);
-      padding-left: 10px;
-      padding-right: 10px;
+      background-color: hsl(166, 100%, 93%);
+    }
+    
+    .Verbal__Word{
+      color:hsl(166, 100%, 37%);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
     }
 
+
     .Visual {
-      background-color: hsl(234, 85%, 45%);
-      padding-left: 10px;
-      padding-right: 10px;
+      background-color: hsl(234, 85%, 93%);
     }
+    .Visual__Word{
+      color: hsl(234, 85%, 45%);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+    }
+
+    .numbers{
+      font-weight: 800;
+      color: hsl(224, 30%, 27%);
+    }
+    .second__number{
+      color: hsl(241, 100%, 89%);
+    }
+    .Button__DIV{
+      width: 100%;
+      background-color: white;
+      margin: auto;
+    }
+    .Button{
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      border-radius: 30px;
+      margin-top: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-weight: 800;
+      font-size: 18px;
+      border-color: none;
+      background-color: hsl(224, 30%, 27%);
+      color: white;
+      border: none
+    }
+    .Button:hover{
+      background-color: hsl(241, 81%, 54%);
+    }
+    @media (min-width: 768px) {
+  .box__div {
+    display: flex;
+    height: 100%;
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.2);
+    border-radius: 40px 40px 40px 40px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .left__div{
+    height: 425px;
+    border-radius: 40px 40px 40px 40px;
+    text-align: center;
+  }
+  .circle{
+    height: 170px;
+    width: 170px;
+  }
+
+  .seven__six {
+      padding-top: 35px;
+      font-size: 60px;
+      margin: 0;
+      font-weight: 800;
+  
+    }
+
+    .one__hundred {
+      height: 18px;
+      margin: 0px;
+      color: hsl(241, 100%, 89%);
+      font-weight: 800;
+    }
+
+    .Great {
+      font-size: 30px;
+      margin-top: 15px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .Paragraph {
+      width: 60%;
+      font-size: 15px;
+    }
+    .Your__result {
+      padding: 25px;
+      font-size: 22px;
+    }
+    .Summary{
+      font-size: 22px;
+    }
+
+}
+
+
+    
   </style>
 </head>
 
@@ -160,18 +278,16 @@
         <p class="Summary">Summary</p>
         <div class="Reaction">
           <p class="Reaction__Word">
-            <svg class="Reaction__SVG" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-              viewBox="0 0 20 20">
-              <path stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
-                d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z" />
-            </svg>
+            <svg class="Reaction__SVG" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+              <path stroke="hsl(0, 100%, 67%)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z" />
+            </svg>           
             Reaction
           </p>
-          <p>80/100</p>
+          <p class="numbers">80 <span class="second__number">/ 100</span></p>
         </div>
         <div class="Memory">
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+          <p class="Memory__Word">
+            <svg class="Memory__SVG" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
               <path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
                 d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858" />
               <path stroke="#FFB21E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
@@ -181,21 +297,21 @@
             </svg>
             Memory
           </p>
-          <p>92/100</p>
+          <p class="numbers">92 <span class="second__number">/ 100</span></p>
         </div>
         <div class="Verbal">
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+          <p class="Verbal__Word">
+            <svg class="Verbal__SVG" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
               <path stroke="#00BB8F" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
                 d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z" />
             </svg>
             Verbal
           </p>
-          <p>61/100</p>
+          <p class="numbers">61 <span class="second__number">/ 100</span></p>
         </div>
         <div class="Visual">
-          <p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+          <p class="Visual__Word">
+            <svg class="Visual__SVG" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
               <path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
                 d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z" />
               <path stroke="#1125D6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
@@ -203,14 +319,13 @@
             </svg>
             Visual
           </p>
-          <p>72/100</p>
+          <p class="numbers">72 <span class="second__number">/ 100</span></p>
         </div>
-        <div class="Button">
-          <button>Continue</button>
+        <div class="Button__DIV">
+          <button class="Button">Continue</button>
         </div>
       </div>
     </div>
   </div>
 </body>
-
 </html>
